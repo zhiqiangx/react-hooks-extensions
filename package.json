@@ -3,8 +3,9 @@
 	"displayName": "shm-component",
 	"description": "create shm component",
 	"version": "0.0.1",
+	"publisher": "zhiqiangx",
 	"engines": {
-		"vscode": "^1.40.0"
+		"vscode": "^1.45.0"
 	},
 	"categories": [
 		"Other"
