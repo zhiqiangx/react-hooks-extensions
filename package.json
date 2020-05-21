@@ -10,16 +10,31 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:shm-component.helloWorld"
+		"onCommand:create-shm-js-component",
+		"onCommand:create-shm-native-component"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "shm-component.helloWorld",
-                "title": "Hello World"
+				"command": "create-shm-js-component",
+				"title": "New JS component"
+			}, {
+				"command": "create-shm-native-component",
+				"title": "New Native component"
 			}
 		],
+		"menus": {
+			"explorer/context": [{
+				"when": "explorerResourceIsFolder",
+				"command": "create-shm-js-component",
+				"group": "navigation"
+			}, {
+				"when": "explorerResourceIsFolder",
+				"command": "create-shm-native-component",
+				"group": "navigation"
+			}]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
