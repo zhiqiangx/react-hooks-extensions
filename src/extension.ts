@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import createJSComponent from './commands/createJSComponent';
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -6,13 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Hello World from shm-js-component!');
 	});
 
-	let nativeDisposable = vscode.commands.registerCommand('create-shm-native-component', (uri: vscode.Uri) => {
-		vscode.window.showInputBox({
-			prompt: 'input component name'
-		}).then((value) => {
-			vscode.window.showInformationMessage(uri.path + value);
-		});
-	});
+	let nativeDisposable = vscode.commands.registerCommand('create-shm-native-component', createJSComponent);
 
 	context.subscriptions.push(jsDisposable);
 	context.subscriptions.push(nativeDisposable);
