@@ -1,7 +1,7 @@
 {
-	"name": "shm-component",
-	"displayName": "shm-component",
-	"description": "create shm component",
+	"name": "react-hooks-extensions",
+	"displayName": "react-hooks-extensions",
+	"description": "a vscode extension for react hooks.",
 	"version": "0.0.1",
 	"publisher": "zhiqiangx",
 	"engines": {
